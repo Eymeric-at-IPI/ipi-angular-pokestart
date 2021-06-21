@@ -1,0 +1,16 @@
+/*
+2 colone
+avec x lignes
+centrer
+padding top
+padding bot
+
+espace entre les card ?
+ */
+
+:host {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 40px;
+	grid-row-gap: 44px;
+}

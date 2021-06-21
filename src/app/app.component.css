@@ -1,0 +1,9 @@
+:host {
+	padding: 0;
+	margin: 0;
+}
+
+.pokeCardList {
+	width: 650px;
+	margin: 42px auto 0 auto;
+}

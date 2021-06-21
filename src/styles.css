@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+	--primary-color: #EF5350;
+	--button-color: #3761A8;
+	--warning-color: #FECA1B;
+	--border-color: #D5DFE7;
+	--background-color: #F6F6F7;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica Neue";
+}
