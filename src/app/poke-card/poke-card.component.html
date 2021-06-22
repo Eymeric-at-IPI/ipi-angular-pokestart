@@ -1,1 +1,27 @@
-<p>{{ getName() }}</p>
+<p class="title">{{ getPokemon().name | titlecase }}</p>
+
+<div class="content">
+	<div class="left">
+		<p class="listTitle">Types :</p>
+		<ul>
+			<li class="listItem">{{ getPokemon().types[0] }}</li>
+			<li class="listItem">{{ getPokemon().types[1] }}</li>
+		</ul>
+
+		<p class="listTitle">Abilities :</p>
+		<ul>
+			<li class="listItem">{{ getPokemon().abilities[0] }}</li>
+			<li class="listItem">{{ getPokemon().abilities[0] }}</li>
+		</ul>
+
+		<p>Weight : {{ getPokemon().weight }} kg</p>
+	</div>
+	<div class="right">
+		<img src="{{ getPokemon().spriteUrl }}" alt="" style="width: 96px">
+		<button
+			[ngClass]="{'alt': getStatus()}"
+			(click)="toggleStatus()">
+			{{ getStatusLabel() }}
+		</button>
+	</div>
+</div>

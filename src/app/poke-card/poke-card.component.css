@@ -4,3 +4,71 @@
 	border: var(--border-color) 1px solid;
 	border-radius: 4px;
 }
+
+.title {
+	margin: 16px 20px;
+	color: var(--primary-color);
+	font-weight: bold;
+	font-size: 24px;
+	text-align: center;
+}
+
+.content {
+	padding: 0;
+	margin: 0 18px;
+	font-size: 16px;
+	font-weight: 300;
+	display: flex;
+	justify-content: space-between;
+}
+
+.content .left {
+	padding: 0;
+	margin: 0;
+}
+
+.listTitle {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+
+.content .left ul {
+	margin: 8px 0 12px 0;
+	padding-left: 20px;
+}
+
+.listItem {
+	font-size: 13px;
+}
+
+.content .right {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+
+.content .right img {
+	width: 96px;
+	height: 96px;
+	margin-top: 4px;
+	margin-bottom: 32px;
+}
+
+.content .right button {
+	padding: 10px 12px;
+	height: 36px;
+	width: 78px;
+	border-radius: 4px;
+	background: var(--button-color);
+	color: white;
+}
+
+.content .right button.alt {
+	width: 101px;
+	background: transparent;
+	border-color: var(--button-color);
+	color: var(--button-color);
+}

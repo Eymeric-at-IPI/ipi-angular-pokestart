@@ -1,5 +1,3 @@
-<app-poke-card name="pikachu"></app-poke-card>
-<app-poke-card name="carapute"></app-poke-card>
-<app-poke-card name="carapute"></app-poke-card>
-<app-poke-card name="carapute"></app-poke-card>
-<app-poke-card name="carapute"></app-poke-card>
+<app-poke-card
+	*ngFor="let pokemon of getPokemons()"
+	[apiPokemon]="pokemon"]></app-poke-card>

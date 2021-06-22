@@ -1,26 +1,37 @@
 :host {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	padding: 0;
 	margin: 0;
 	width: 100%;
-	height: 64px;
+	height: 70px;
 	background-color: var(--primary-color);
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.title {
+.middle {
+	padding: 0;
+	margin: 0;
 	grid-column-start: 2;
-	color: white;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 36px;
 	display: flex;
 	justify-self: center;
 	align-items: center;
 }
 
+.middle .title {
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+}
+
+.right {
+	display: flex;
+	justify-content: end;
+}
+
 .cartButton {
-	justify-self: end;
 	padding: 10px 12px;
 	margin: 1rem;
 	width: 112px;
