@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonsService } from "../services/pokemons.service";
-import { Pokemon } from "../models/Pokemon";
-import { async } from "rxjs";
-import {APIPokemons} from "../models/APIPokemons";
+import {async, Observable} from "rxjs";
+import {PokeAPIResult, Pokemon, PokemonInfo} from "../models/models";
 
 @Component({
   selector: 'app-poke-card-list',
@@ -11,16 +10,20 @@ import {APIPokemons} from "../models/APIPokemons";
 })
 export class PokeCardListComponent implements OnInit {
 
-	pokemons: APIPokemons[] = [];
+	pokeAPIResult: PokeAPIResult<PokemonInfo> | undefined;
 
-  	constructor(private apiService: PokemonsService) { }
-
-	ngOnInit(): void {
-		this.pokemons = this.apiService.fetchData();
+  	constructor(private pokemonsService: PokemonsService) {
+		// this.pokeAPIResult =
 	}
 
-	getPokemons(): APIPokemons[] {
-  		return this.pokemons;
+	ngOnInit(): void {
+		this.pokemonsService
+			.fetchAll()
+			.subscribe(result => this.pokeAPIResult = result);
+	}
+
+	getPokemons(): PokeAPIResult<PokemonInfo> | undefined {
+  		return this.pokeAPIResult;
 	}
 
 }

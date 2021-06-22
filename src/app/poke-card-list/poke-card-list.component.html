@@ -1,3 +1,4 @@
 <app-poke-card
-	*ngFor="let pokemon of getPokemons()"
-	[apiPokemon]="pokemon"]></app-poke-card>
+	*ngFor="let pokeInfo of pokeAPIResult?.results"
+	[pokeInfo]="pokeInfo"
+	></app-poke-card>

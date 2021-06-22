@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Pokemon} from "../models/Pokemon";
-import {APIPokemons} from "../models/APIPokemons";
-import {PokemonService} from "../services/pokemon.service";
+import {PokeAPIResult, Pokemon, PokemonInfo} from "../models/models";
+import {PokemonsService} from "../services/pokemons.service";
 
 @Component({
   selector: 'app-poke-card',
@@ -9,20 +8,18 @@ import {PokemonService} from "../services/pokemon.service";
   styleUrls: ['./poke-card.component.css']
 })
 export class PokeCardComponent implements OnInit {
-	@Input() apiPokemon!: APIPokemons;
-	pokemon: Pokemon = {abilities: ["", ""], name: "", spriteUrl: "", types: ["", ""], weight: 0};
+	@Input() pokeInfo!: PokemonInfo;
+	pokemon ?: Pokemon;
 
 	status : boolean = false;
 
-  	constructor(private pokemonService: PokemonService) { }
+  	constructor(private pokemonsService: PokemonsService) { }
 
   	ngOnInit(): void {
-		this.pokemon = this.pokemonService.fetchData(this.apiPokemon.url, this.apiPokemon.name);
+		this.pokemonsService
+			.fetchOne(this.pokeInfo.url)
+			.subscribe(result => this.pokemon = result);
   	}
-
-  	getPokemon() {
-  		return this.pokemon;
-	}
 
 	getStatusLabel() {
 		return this.status ? "UNADOPT" : "ADOPT";

@@ -1,23 +1,23 @@
-<p class="title">{{ getPokemon().name | titlecase }}</p>
+<p class="title">{{ pokemon?.name | titlecase }}</p>
 
 <div class="content">
 	<div class="left">
 		<p class="listTitle">Types :</p>
 		<ul>
-			<li class="listItem">{{ getPokemon().types[0] }}</li>
-			<li class="listItem">{{ getPokemon().types[1] }}</li>
+			<li *ngIf="pokemon" class="listItem">{{ pokemon.types[0].type.name }}</li>
+			<li *ngIf="pokemon" class="listItem">{{ pokemon.types[1].type.name }}</li>
 		</ul>
 
 		<p class="listTitle">Abilities :</p>
 		<ul>
-			<li class="listItem">{{ getPokemon().abilities[0] }}</li>
-			<li class="listItem">{{ getPokemon().abilities[0] }}</li>
+			<li *ngIf="pokemon" class="listItem">{{ pokemon.abilities[0].ability.name }}</li>
+			<li *ngIf="pokemon" class="listItem">{{ pokemon.abilities[1].ability.name }}</li>
 		</ul>
 
-		<p>Weight : {{ getPokemon().weight }} kg</p>
+		<p>Weight : {{ pokemon?.weight }} kg</p>
 	</div>
 	<div class="right">
-		<img src="{{ getPokemon().spriteUrl }}" alt="" style="width: 96px">
+		<img *ngIf="pokemon" src="{{pokemon.sprites.other['official-artwork'].front_default}}" alt="">
 		<button
 			[ngClass]="{'alt': getStatus()}"
 			(click)="toggleStatus()">

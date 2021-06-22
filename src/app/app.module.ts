@@ -7,7 +7,7 @@ import { PokeCardListComponent } from './poke-card-list/poke-card-list.component
 import { PokeCardComponent } from './poke-card/poke-card.component';
 
 import { PokemonsService } from "./services/pokemons.service";
-import { PokemonService } from "./services/pokemon.service";
+// import { PokemonService } from "./services/pokemon.service";
 import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
@@ -23,7 +23,7 @@ import { HttpClientModule } from "@angular/common/http";
   ],
   providers: [
 	  PokemonsService,
-	  PokemonService
+	  //PokemonService
   ],
   bootstrap: [AppComponent]
 })
