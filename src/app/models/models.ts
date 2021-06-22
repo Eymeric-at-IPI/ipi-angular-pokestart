@@ -22,11 +22,7 @@ export interface Pokemon {
 	abilities: Ability[];
 	types: Type[];
 	sprites: {
-		other: {
-			"official-artwork": {
-				front_default: string;
-			}
-		}
+		front_default: string;
 	}
 }
 

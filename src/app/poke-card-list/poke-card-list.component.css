@@ -1,13 +1,3 @@
-/*
-2 colone
-avec x lignes
-centrer
-padding top
-padding bot
-
-espace entre les card ?
- */
-
 :host {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);

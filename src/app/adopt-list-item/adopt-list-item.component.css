@@ -1,0 +1,35 @@
+:host {
+
+}
+
+li {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+li img {
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+}
+
+li p {
+	font-family: "Helvetica Neue";
+	font-size: 16px;
+	font-weight: 300;
+}
+
+li a {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 24px;
+	width: 24px;
+}
+
+li .cross {
+	height: 18px;
+	width: 18px;
+}

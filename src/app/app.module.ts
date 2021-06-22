@@ -9,21 +9,26 @@ import { PokeCardComponent } from './poke-card/poke-card.component';
 import { PokemonsService } from "./services/pokemons.service";
 // import { PokemonService } from "./services/pokemon.service";
 import { HttpClientModule } from "@angular/common/http";
+import { AdoptDropdownButtonComponent } from './adopt-dropdown-button/adopt-dropdown-button.component';
+import { AdoptListComponent } from './adopt-list/adopt-list.component';
+import { AdoptListItemComponent } from './adopt-list-item/adopt-list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     PokeCardListComponent,
-    PokeCardComponent
+    PokeCardComponent,
+    AdoptDropdownButtonComponent,
+    AdoptListComponent,
+    AdoptListItemComponent
   ],
   imports: [
     BrowserModule,
 	HttpClientModule,
   ],
   providers: [
-	  PokemonsService,
-	  //PokemonService
+	  PokemonsService
   ],
   bootstrap: [AppComponent]
 })

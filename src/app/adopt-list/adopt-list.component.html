@@ -1,0 +1,7 @@
+<ul *ngIf="adoptionList">
+	<app-adopt-list-item
+		*ngFor="let item of adoptionList"
+		[pokemon]="item"
+		(itemDeleteEvent)="deleteItem($event)"
+	></app-adopt-list-item>
+</ul>
